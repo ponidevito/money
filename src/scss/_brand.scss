@@ -1,0 +1,132 @@
+.section {
+  &__brand {
+    position: relative;
+  }
+}
+.brand 
+{
+ 
+  &__pseudo {
+    background: linear-gradient(
+      194.7deg,
+      rgba(245, 130, 32, 0.294) 18.97%,
+      rgba(237, 28, 36, 0.35) 71.56%
+    );
+    filter: blur(45px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 233px;
+    height: 234px;
+    @include md {
+      width: 133px;
+      height: 134px;
+    }
+  }
+  &__items {
+    padding: 0px 153px 0px 60px;
+    margin-top: 57px;
+    display: flex;
+    justify-content: space-around;
+    @media (max-width: 1300px) {
+      padding: 0px ;
+    }
+    @include md {
+      flex-wrap: wrap-reverse;
+    }
+    @include md {
+      margin-top: 35px;
+    }
+    @include sm {
+      margin-top: 20px;
+    }
+    &.items-reverse{
+        flex-direction: row-reverse
+    }
+  }
+
+  &__item {
+    
+    flex: 0 1 60%;
+    @media (max-width: 1300px) {
+      flex: 0 1 50%;
+    }
+    @include md {
+      flex: 1 1 100%;
+    }
+    &:last-child {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 540px;
+      flex: 0 1 40%;
+      @media (max-width: 1300px) {
+        flex: 0 1 50%;
+      }
+      @include md {
+        flex: 1 1 100%;
+      }
+    }
+    &.item-reverse{
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  &__image {
+    @include md {
+      max-width: 100%;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__infoTitle {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 130%;
+    text-align: center;
+    color: $colorOrangeLight;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+      @include md {
+        margin-bottom: 10px;
+      }
+    }
+    @include lg {
+      font-size: 22px;
+      line-height: 120%;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 130%;
+    text-align: center;
+    color: $colorBlack;
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+    @include lg {
+      font-size: 18px;
+      line-height: 120%;
+    }
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 130%;
+    text-align: center;
+    color: #065e92;
+    transition: .3s ease;
+    &:hover{
+        color: $colorOrangeLight;
+    }
+    @include md {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+  }
+}

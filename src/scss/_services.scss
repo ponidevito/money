@@ -1,0 +1,49 @@
+.section {
+  &__services {
+    padding: 24px 0px 62px 0px;
+  }
+}
+.services {
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: 11px;
+    }
+  }
+
+  &__subtitle {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    gap: 54px;
+    @media (max-width: 1200px) {
+      gap: 20px;
+    }
+    @include lg {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include sm {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 10px;
+    }
+  }
+
+}
+
+.item {
+  &__section-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: center;
+    color: $colorOrangeLight;
+    &:not(:last-child) {
+      margin-bottom: 6px;
+    }
+  }
+}

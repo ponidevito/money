@@ -1,0 +1,22 @@
+.section {
+  &__partners {
+    padding-bottom: 75px;
+    @include md {
+      padding-bottom: 35px;
+    }
+  }
+}
+.partners {
+  &__swiper {
+    padding-top: 55px;
+    @include md {
+      padding-top: 25px;
+    }
+
+    .swiper-slide {
+      @include md {
+        text-align: center;
+      }
+    }
+  }
+}
